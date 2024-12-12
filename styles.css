@@ -17,25 +17,23 @@ header, footer {
     text-align: center;
     padding: 1rem;
     width: 100%;
-    position: fixed; /* Fix header and footer */
-    left: 0;
 }
 
 header {
-    top: 0; /* Align header to the top */
+    position: relative; /* Allow header to push content down */
 }
 
 footer {
-    bottom: 0; /* Align footer to the bottom */
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
     gap: 1rem;
-    padding: 4rem 1rem 2rem; /* Add padding to avoid content overlap with header/footer */
+    padding: 4rem 1rem 2rem; /* Adjust padding for gallery */
     max-width: 1000px;
-    margin: auto; /* Center the gallery */
+    margin: 0 auto; /* Center the gallery */
     flex: 1; /* Allow gallery to grow */
 }
 
@@ -57,4 +55,18 @@ footer {
 .scientific-name {
     margin: 0.5rem 0;
     font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+        padding-top: 3rem; /* Adjust top padding for header height */
+    }
 }
