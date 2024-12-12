@@ -1,34 +1,41 @@
+* {
+    box-sizing: border-box; /* Ensure consistent box sizing */
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-directbody {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body fills the viewport */
-    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: fixed; /* Fix header and footer */
+    left: 0;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
+    top: 0; /* Align header to the top */
+}
+
+footer {
+    bottom: 0; /* Align footer to the bottom */
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
     gap: 1rem;
-    padding: 1rem;
+    padding: 4rem 1rem 2rem; /* Add padding to avoid content overlap with header/footer */
     max-width: 1000px;
-    width: 100%;
+    margin: auto; /* Center the gallery */
     flex: 1; /* Allow gallery to grow */
 }
 
@@ -50,66 +57,4 @@ header {
 .scientific-name {
     margin: 0.5rem 0;
     font-style: italic;
-}
-
-footer {
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    width: 100%;
-    position: fixed; /* Fix footer to the bottom */
-    bottom: 0; /* Align to the bottom */
-}ion: column;
-    align-items: center;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1000px;
-    width: 100%;
-}
-
-.photo-item {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.photo-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Standard height */
-    object-fit: cover; /* Ensures the image fits the container */
-}
-
-.photo-item em {
-    width: 90%;
-    margin: 0.5rem auto;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-footer {
-    margin-top: auto;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    width: 100%;
 }
