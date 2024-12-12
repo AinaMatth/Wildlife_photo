@@ -19,54 +19,81 @@ header, footer {
     width: 100%;
 }
 
-header {
-    position: relative; /* Allow header to push content down */
-}
-
 footer {
     margin-top: auto; /* Push footer to the bottom */
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
-    gap: 1rem;
-    padding: 4rem 1rem 2rem; /* Adjust padding for gallery */
     max-width: 1000px;
     margin: 0 auto; /* Center the gallery */
+    padding: 2rem 1rem;
     flex: 1; /* Allow gallery to grow */
 }
 
 .photo-item {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem; /* Space between items */
 }
 
-.photo-item img {
+.photo-item.left {
+    flex-direction: row; /* Left-aligned items */
+}
+
+.photo-item.right {
+    flex-direction: row-reverse; /* Right-aligned items */
+}
+
+.image-container {
+    position: relative;
+    flex: 1; /* Allow image container to take space */
+    margin-right: 1rem; /* Space between image and description */
+}
+
+.image-container img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Standard height */
+    max-height: 400px; /* Increase the standard height */
     object-fit: cover; /* Ensures the image fits the container */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.description {
+    flex: 1; /* Allow description to take space */
+    margin-left: 1rem; /* Space between description and image */
 }
 
 .scientific-name {
     margin: 0.5rem 0;
-    font-style: italic;
+    font-weight: bold;
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
-    }
-}
-
 @media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-        padding-top: 3rem; /* Adjust top padding for header height */
+    .photo-item {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .image-container {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add bottom margin */
+    }
+
+    .description {
+        margin-left: 0; /* Remove left margin */
     }
 }
