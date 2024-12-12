@@ -41,7 +41,7 @@ header {
     object-fit: cover; /* Ensures the image fits the container */
 }
 
-.photo-item input {
+.photo-item em {
     width: 90%;
     margin: 0.5rem auto;
     padding: 0.5rem;
