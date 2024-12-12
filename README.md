@@ -16,19 +16,14 @@ Welcome to the **Wildlife Photography Gallery**! This project showcases beautifu
 - **JavaScript**: (optional) For any future enhancements.
 
 ## 📁 Project Structure
-
-wildlife-photography/
-├── images/ # Folder containing your images
-│ ├── image1.jpg
-│ ├── image2.jpg
-│ ├── ...
-├── index.html # Main HTML file
-└── styles.css # Stylesheet for the website
+ wildlife-photography
+  | images #Images folder
+  |index.html #main HTML5 file
+  |styles.css #Stylesheet
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
-
 ```bash
 git clone https://github.com/yourusername/wildlife-photography.git
 cd wildlife-photography
