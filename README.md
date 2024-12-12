@@ -1,19 +1,18 @@
-# Wildlife_photo
-A minimal web# 🦁 Wildlife Photography Gallery
+# 🦁 Wildlife Photography Gallery
 
-Welcome to the **Wildlife Photography Gallery**! This project showcases beautiful wildlife photographs with space for scientific names. Perfect for photography students or anyone passionate about wildlife!
+Welcome to MY **Wildlife Photography Gallery**! This project showcases beautiful wildlife photographs with their scientific names.
 
+See more in [Wildlife_photo](https://ainamatth.github.io/Wildlife_photo/)
 ## 📸 Features
 
 - **Responsive Design**: Looks great on both mobile and desktop devices.
 - **Gallery Layout**: Displays images in a clean, grid-like format.
-- **Input Fields**: Easily add scientific names for each animal.
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: For the structure of the website.
 - **CSS3**: For styling and layout.
-- **JavaScript**: (optional) For any future enhancements.
+- **JavaScript**: (optional)
 
 ## 📁 Project Structure
  wildlife-photography
