@@ -15,10 +15,12 @@ See more in [Wildlife_photo](https://ainamatth.github.io/Wildlife_photo/)
 - **JavaScript**: (optional)
 
 ## 📁 Project Structure
+```md
  wildlife-photography
   | images #Images folder
   |index.html #main HTML5 file
   |styles.css #Stylesheet
+```
 
 ## 🚀 Getting Started
 
