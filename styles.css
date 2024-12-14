@@ -24,7 +24,7 @@ footer {
 }
 
 .gallery {
-    max-width: 1000px;
+    max-width: 1200px; /* Increased max width for larger images */
     margin: 0 auto; /* Center the gallery */
     padding: 2rem 1rem;
     flex: 1; /* Allow gallery to grow */
@@ -53,7 +53,7 @@ footer {
 .image-container img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Increase the standard height */
+    max-height: 500px; /* Increased height for larger display */
     object-fit: cover; /* Ensures the image fits the container */
 }
 
@@ -77,9 +77,8 @@ footer {
     margin-left: 1rem; /* Space between description and image */
 }
 
-.scientific-name {
-    margin: 0.5rem 0;
-    font-weight: bold;
+.footer-creator {
+    color: #ffcc00; /* Improved contrast color for footer text */
 }
 
 /* Responsive Design */
